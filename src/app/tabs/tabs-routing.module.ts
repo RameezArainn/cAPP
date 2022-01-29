@@ -7,28 +7,29 @@ const routes: Routes = [
   {
     path: 'tabs',
     component: TabsPage,
-  //   children:[
-  //     {
+    children:[
+      {
 
-  //       path: 'home',
-  //       loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
-  //     },
-  //     {
+        path: 'home',
+        loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
+      },
+      {
 
-  //       path: 'map',
-  //       loadChildren: () => import('../map/map.module').then(m => m.MapPageModule)
-  //     },
-  //     {
+        path: 'map',
+        loadChildren: () => import('../map/map.module').then(m => m.MapPageModule)
+      },
+      {
 
-  //       path: 'offers',
-  //       loadChildren: () => import('../offers/offers.module').then(m => m.OffersPageModule)
-  //     },
-  //      {
-  //   path: '',
-  //   redirectTo: '/home',
-  // },
-  //   ]
-  }
+        path: 'offers',
+        loadChildren: () => import('../offers/offers.module').then(m => m.OffersPageModule)
+      },
+
+    ]
+  },
+         {
+    path: '',
+    redirectTo: 'tabs/home',
+  },
 ];
 
 @NgModule({

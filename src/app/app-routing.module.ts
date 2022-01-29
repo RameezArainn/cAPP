@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'offers',
     loadChildren: () => import('./offers/offers.module').then( m => m.OffersPageModule)
   },
+  {
+    path: 'otp-verification',
+    loadChildren: () => import('./otp-verification/otp-verification.module').then( m => m.OtpVerificationPageModule)
+  },
 
 ];
 

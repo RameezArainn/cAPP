@@ -1,0 +1,38 @@
+ion-header{
+    --background:transparent;
+    border:0px;
+    ion-toolbar{
+    --background:transparent;
+    ion-title{
+        --color:black;
+        font-weight: bold;
+    }
+
+    }
+}
+ion-content{
+    .enter_your_phone{
+        font-size: 16px;
+        font-weight: bolder;
+        color: #040404;
+        margin-bottom: 2vh;
+        margin-top: 5vh;
+    }
+    ion-item{
+        border:1px solid #b4b4b4;
+        border-radius: 5px;
+        // margin: 10px;
+        margin-top: 3vh;
+        margin-bottom: 1vh;
+    }
+    ion-button{
+        height: 45px;
+        --border-radius: 8px;
+        text-transform: initial;
+        font-size: 17px;
+        font-weight: bold;
+         margin-top:25vh;
+        width:100%;
+       
+    }
+}
