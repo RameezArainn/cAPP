@@ -17,9 +17,9 @@
 
   <ion-input type="tel" placeholder="Mobile Number"></ion-input>
 </ion-item>
-<ion-button expand="block">
+<ion-button expand="block" (click)="Login()">
   Login
 </ion-button>
 </form>
-<p class="dont_have_acc">Don't have an account? <span>Register</span></p>
+<p class="dont_have_acc">Don't have an account? <span routerLink='/register'>Register</span></p>
 </ion-content>

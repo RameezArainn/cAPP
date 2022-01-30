@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./offers.page.scss'],
 })
 export class OffersPage implements OnInit {
-
+  segmentValue='offers'
   constructor() { }
 
   ngOnInit() {
   }
-
+  switchSegment(event){
+    console.log(event)
+   this.segmentValue= event.detail.value
+  }
 }

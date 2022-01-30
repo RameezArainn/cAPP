@@ -11,14 +11,14 @@ export class AppComponent {
 
   constructor(private router:Router,private navCtrl:NavController) {
     let login=true
-    // if(login){
-    //   this.navCtrl.navigateRoot('/tabs');
+    if(!login){
+      this.navCtrl.navigateRoot('/tabs');
 
-    // }
-    // else{
-    //   this.navCtrl.navigateRoot('/login');
+    }
+    else{
+      this.navCtrl.navigateRoot('/login');
 
-    // }
+    }
   }
 
 }

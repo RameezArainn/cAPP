@@ -1,0 +1,11 @@
+ion-header {
+    --background: transparent;
+    border: 0px;
+    ion-toolbar {
+      --background: transparent;
+      ion-title {
+        --color: black;
+        font-weight: bold;
+      }
+    }
+  }
