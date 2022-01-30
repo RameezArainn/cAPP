@@ -19,7 +19,7 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
   Login(){
-this.navCtrl.navigateRoot('/tabs')
+this.navCtrl.navigateForward('/otp-verification')
   }
 
 }

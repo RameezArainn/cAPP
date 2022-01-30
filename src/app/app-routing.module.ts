@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'shop-detail',
     loadChildren: () => import('./shop-detail/shop-detail.module').then( m => m.ShopDetailPageModule)
   },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },
 
 ];
 

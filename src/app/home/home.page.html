@@ -4,7 +4,7 @@
       Application Name
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button>
+      <ion-button routerLink="/settings">
         <ion-icon name="settings-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -23,7 +23,7 @@
 <p class="shops_text">Shops you have won awards </p>
 
 <div class="shops_container">
-<ion-card class="shop_card">
+<ion-card class="shop_card" routerLink='/shop-detail'>
   <ion-row>
     <ion-col size="3" class="img_col">
 <img src="assets/logo_cons.png" alt="">
@@ -32,73 +32,89 @@
       <p class="shop_name">Shop Name</p>
       <p class="items_need">items need to get 1 point</p>
       <!-- <ion-range></ion-range> -->
-
-      <p class="rewards_p"><span class="r_won">Rewards won: 3</span> <span class="r_rem">Rewards left:2</span></p>
-    </ion-col>
-  </ion-row>
-
-</ion-card>
-
-<ion-card class="shop_card">
-  <ion-row>
-    <ion-col size="3" class="img_col">
-<img src="assets/logo_cons.png" alt="">
-    </ion-col>
-    <ion-col size="9" class="content_col">
-      <p class="shop_name">Shop Name</p>
-      <p class="items_need">items need to get 1 point</p>
-      <!-- <ion-range></ion-range> -->
-
-      <p class="rewards_p"><span class="r_won">Rewards won: 3</span> <span class="r_rem">Rewards left:2</span></p>
-    </ion-col>
-  </ion-row>
-
-</ion-card>
-<ion-card class="shop_card">
-  <ion-row>
-    <ion-col size="3" class="img_col">
-<img src="assets/logo_cons.png" alt="">
-    </ion-col>
-    <ion-col size="9" class="content_col">
-      <p class="shop_name">Shop Name</p>
-      <p class="items_need">items need to get 1 point</p>
-      <!-- <ion-range></ion-range> -->
-
-      <p class="rewards_p"><span class="r_won">Rewards won: 3</span> <span class="r_rem">Rewards left:2</span></p>
-    </ion-col>
-  </ion-row>
-
-</ion-card>
-<ion-card class="shop_card">
-  <ion-row>
-    <ion-col size="3" class="img_col">
-<img src="assets/logo_cons.png" alt="">
-    </ion-col>
-    <ion-col size="9" class="content_col">
-      <p class="shop_name">Shop Name</p>
-      <p class="items_need">items need to get 1 point</p>
-      <!-- <ion-range></ion-range> -->
-
-      <p class="rewards_p"><span class="r_won">Rewards won: 3</span> <span class="r_rem">Rewards left:2</span></p>
-    </ion-col>
-  </ion-row>
-
-</ion-card>
-<ion-card class="shop_card">
-  <ion-row>
-    <ion-col size="3" class="img_col">
-<img src="assets/logo_cons.png" alt="">
-    </ion-col>
-    <ion-col size="9" class="content_col">
-      <p class="shop_name">Shop Name</p>
-      <p class="items_need">items need to get 1 point</p>
-      <!-- <ion-item> -->
-        <ion-range min="1" max="6" step="2" color="success" value="4" [pin]="true">
+      <div class="range_item">
+        <ion-range min="1" max="6" step="2" color="success" value="4" [pin]="true" mode="md">
          
         </ion-range>
-      <!-- </ion-item> -->
-      <!-- <ion-range></ion-range> -->
+      </div>
+      <p class="rewards_p"><span class="r_won">Rewards won: 3</span> <span class="r_rem">Rewards left:2</span></p>
+    </ion-col>
+  </ion-row>
 
+</ion-card>
+
+<ion-card class="shop_card" routerLink='/shop-detail'>
+  <ion-row>
+    <ion-col size="3" class="img_col">
+<img src="assets/logo_cons.png" alt="">
+    </ion-col>
+    <ion-col size="9" class="content_col">
+      <p class="shop_name">Shop Name</p>
+      <p class="items_need">items need to get 1 point</p>
+      <!-- <ion-range></ion-range> -->
+      <div class="range_item">
+        <ion-range min="1" max="6" step="2" color="success" value="4" [pin]="true" mode="md">
+         
+        </ion-range>
+      </div>
+      <p class="rewards_p"><span class="r_won">Rewards won:3</span> <span class="r_rem">Rewards left:2</span></p>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+<ion-card class="shop_card" routerLink='/shop-detail'>
+  <ion-row>
+    <ion-col size="3" class="img_col">
+<img src="assets/logo_cons.png" alt="">
+    </ion-col>
+    <ion-col size="9" class="content_col">
+      <p class="shop_name">Shop Name</p>
+      <p class="items_need">items need to get 1 point</p>
+      <!-- <ion-range></ion-range> -->
+      <div class="range_item">
+        <ion-range min="1" max="6" step="2" color="success" value="4" [pin]="true" mode="md">
+         
+        </ion-range>
+      </div>
+      <p class="rewards_p"><span class="r_won">Rewards won: 3</span> <span class="r_rem">Rewards left:2</span></p>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+<ion-card class="shop_card">
+  <ion-row>
+    <ion-col size="3" class="img_col">
+<img src="assets/logo_cons.png" alt="">
+    </ion-col>
+    <ion-col size="9" class="content_col">
+      <p class="shop_name">Shop Name</p>
+      <p class="items_need">items need to get 1 point</p>
+      <!-- <ion-range></ion-range> -->
+      <div class="range_item">
+        <ion-range min="1" max="6" step="2" color="success" value="4" [pin]="true" mode="md">
+         
+        </ion-range>
+      </div>
+      <p class="rewards_p"><span class="r_won">Rewards won: 3</span> <span class="r_rem">Rewards left:2</span></p>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+<ion-card class="shop_card">
+  <ion-row>
+    <ion-col size="3" class="img_col">
+<img src="assets/logo_cons.png" alt="">
+    </ion-col>
+    <ion-col size="9" class="content_col">
+      <p class="shop_name">Shop Name</p>
+      <p class="items_need">items need to get 1 point</p>
+     
+      <!-- <ion-range></ion-range> -->
+      <div class="range_item">
+        <ion-range min="1" max="6" step="2" color="success" value="4" [pin]="true" mode="md">
+         
+        </ion-range>
+      </div>
       <p class="rewards_p"><span class="r_won">Rewards won: 3</span> <span class="r_rem">Rewards left:2</span></p>
     </ion-col>
   </ion-row>
