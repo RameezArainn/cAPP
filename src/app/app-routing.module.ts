@@ -51,6 +51,10 @@ const routes: Routes = [
     path: 'policy-terms',
     loadChildren: () => import('./policy-terms/policy-terms.module').then( m => m.PolicyTermsPageModule)
   },
+  {
+    path: 'barcode-modal',
+    loadChildren: () => import('./barcode-modal/barcode-modal.module').then( m => m.BarcodeModalPageModule)
+  },
 
 ];
 

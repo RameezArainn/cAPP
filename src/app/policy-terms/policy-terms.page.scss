@@ -1,0 +1,25 @@
+ion-header {
+    --background: transparent;
+    border: 0px;
+    ion-toolbar {
+      --background: transparent;
+      ion-title {
+        --color: black;
+        font-weight: bold;
+      }
+    }
+  }
+  ion-content{
+      padding: 16px;
+      .main_text{
+          font-weight: bold;
+          font-size: 16px;
+          color:#222222;
+      }
+      .inner_text{
+          font-weight: 300;
+          font-size: 12px;
+          line-height: 1.1;
+          color:#777777;
+      }
+  }

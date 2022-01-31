@@ -1,9 +1,18 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>report-a-problem</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Report</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="ion-padding">
+<p class="main_text">Comment</p>
+<ion-item lines="none">
+  <ion-textarea rows="6"></ion-textarea>
+</ion-item>
 </ion-content>
+<ion-footer class="ion-padding">
+  <ion-button expand="block">Report</ion-button>
+</ion-footer>
