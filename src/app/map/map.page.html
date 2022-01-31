@@ -1,9 +1,9 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>map</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
 
+<ion-content [fullscreen]="true">
+  <ion-segment [value]="segmentValue" (ionChange)="switchSegment($event)">
+    <ion-segment-button value="Cafe">Cafe</ion-segment-button>
+    <ion-segment-button value="category">Category</ion-segment-button>
+    <ion-segment-button value="all">Show All</ion-segment-button>
+  </ion-segment>
 </ion-content>

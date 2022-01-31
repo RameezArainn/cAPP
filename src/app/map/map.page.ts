@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./map.page.scss'],
 })
 export class MapPage implements OnInit {
-
+  segmentValue='Cafe'
   constructor() { }
 
   ngOnInit() {
   }
+switchSegment(eve){
 
+}
 }

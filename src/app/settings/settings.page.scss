@@ -9,3 +9,15 @@ ion-header {
       }
     }
   }
+  ion-content{
+    padding:16px;
+    ion-item{
+      font-weight: 600;
+      color:#222222;
+      ion-label{
+        font-weight: 600;
+        color:#222222;
+        font-size: 14px;
+      }
+    }
+  }

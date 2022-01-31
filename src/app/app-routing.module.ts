@@ -43,6 +43,14 @@ const routes: Routes = [
     path: 'settings',
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
   },
+  {
+    path: 'report-a-problem',
+    loadChildren: () => import('./report-a-problem/report-a-problem.module').then( m => m.ReportAProblemPageModule)
+  },
+  {
+    path: 'policy-terms',
+    loadChildren: () => import('./policy-terms/policy-terms.module').then( m => m.PolicyTermsPageModule)
+  },
 
 ];
 
