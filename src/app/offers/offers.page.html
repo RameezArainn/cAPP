@@ -13,10 +13,15 @@
   <ion-segment-button value="gifts">Birthday Gifts</ion-segment-button>
 </ion-segment>
 
-<div *ngIf="segmentValue==='offers'">
+<div *ngIf="segmentValue==='offers'" class="offersContainer">
 
-<div>
-  Offers
+<div class="shop_offers">
+  <ion-card>
+    <img src="assets/offer1.png" alt="">
+  </ion-card>
+  <ion-card>
+    <img src="assets/offer2.png" alt="">
+  </ion-card>
  
 </div>
 
@@ -24,9 +29,78 @@
 
 
 
-<div *ngIf="segmentValue==='gifts'">
-  <div>
-    gifts
+<div *ngIf="segmentValue==='gifts'" class="giftsContainer">
+  <!-- <div class="no_gifts">
+    <p>No Shops Provide gifts</p>
+  </div> -->
+  <div class="shop_gifts">
+    <ion-item lines="none">
+      <ion-label>
+        Birthday
+      </ion-label>
+      <ion-label slot="end">
+        Feb 01,2000
+      </ion-label>
+    </ion-item>
+
+    <p class="shops_head">Shops <span class="shops_provide">(Shops that privide birthday gifts)</span></p>
+<div class="shops_container">
+    <ion-card class="shop_card">
+      <ion-row>
+        <ion-col size="3" class="img_col">
+    <img src="assets/logo_cons.png" alt="">
+        </ion-col>
+        <ion-col size="9" class="content_col">
+          <p class="shop_name">Shop Name</p>
+          <p class="items_need">items need to get 1 point</p>
+
+          <div class="range_item">
+            <ion-range min="1" max="6" step="2" color="success" value="4" [pin]="true" mode="md">
+             
+            </ion-range>
+          </div>
+        
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card class="shop_card">
+      <ion-row>
+        <ion-col size="3" class="img_col">
+    <img src="assets/logo_cons.png" alt="">
+        </ion-col>
+        <ion-col size="9" class="content_col">
+          <p class="shop_name">Shop Name</p>
+          <p class="items_need">items need to get 1 point</p>
+
+          <div class="range_item">
+            <ion-range min="1" max="6" step="2" color="success" value="4" [pin]="true" mode="md">
+             
+            </ion-range>
+          </div>
+        
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card class="shop_card">
+      <ion-row>
+        <ion-col size="3" class="img_col">
+    <img src="assets/logo_cons.png" alt="">
+        </ion-col>
+        <ion-col size="9" class="content_col">
+          <p class="shop_name">Shop Name</p>
+          <p class="items_need">items need to get 1 point</p>
+
+          <div class="range_item">
+            <ion-range min="1" max="6" step="2" color="danger" value="4" [pin]="true" mode="md">
+             
+            </ion-range>
+          </div>
+        
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+
   </div>
 </div>
 </ion-content>

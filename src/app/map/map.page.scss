@@ -10,7 +10,7 @@ ion-header {
 
     
     ion-segment{
-      width: 90%;
+      // width: 90%;
       /* align-self: center; */
       margin: auto;
       padding:10px;
@@ -31,5 +31,13 @@ ion-header {
           --indicator-height:0px;
           min-height: 36px;
       }
+  }
+  .mapcontainer{
+    width:100%;
+    height:100vh;
+    z-index: -1;
+    img{
+      object-fit: cover;
+    }
   }
   }

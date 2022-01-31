@@ -1,9 +1,13 @@
 
 
 <ion-content [fullscreen]="true">
-  <ion-segment [value]="segmentValue" (ionChange)="switchSegment($event)">
+  <ion-segment [value]="segmentValue" slot="fixed" (ionChange)="switchSegment($event)">
     <ion-segment-button value="Cafe">Cafe</ion-segment-button>
     <ion-segment-button value="category">Category</ion-segment-button>
     <ion-segment-button value="all">Show All</ion-segment-button>
   </ion-segment>
+  <div class="mapcontainer">
+    <img src="/assets/mapDemo.jpg" alt="">
+  </div>
+ 
 </ion-content>
