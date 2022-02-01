@@ -4,7 +4,8 @@ import { ToastController } from '@ionic/angular'
 
 @Injectable()
 export class GlobalVariable {
-    inProduction="Testing"
+
+  baseUrl='https://rewards-api-upwork.herokuapp.com/api/'
   
   constructor(private toastController: ToastController,){
      
