@@ -55,6 +55,10 @@ const routes: Routes = [
     path: 'barcode-modal',
     loadChildren: () => import('./barcode-modal/barcode-modal.module').then( m => m.BarcodeModalPageModule)
   },
+  {
+    path: 'language',
+    loadChildren: () => import('./language/language.module').then( m => m.LanguagePageModule)
+  },
 
 ];
 
