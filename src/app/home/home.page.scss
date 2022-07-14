@@ -2,77 +2,227 @@ ion-header {
   --background: transparent;
   border: 0px;
   ion-toolbar {
-    --background: transparent;
+    --background: var(--ion-color-secondary);
+    // --background: transparent;
     ion-title {
-      --color: black;
-      font-weight: bold;
+      --color: rgb(255, 255, 255);
+      // font-weight: bold;
+      font-size: 18px;
+      font-family: "poppins-black";
+    }
+    .apps_icon {
+      margin-left: 20px;
     }
   }
 }
 ion-content {
-  .barcode_item {
-    border: 1px solid var(--ion-color-primary);
-    border-radius: 5px;
-    margin: 10px;
+  --background: var(--ion-color-secondary);
+  .searchbar-input-container.sc-ion-searchbar-ios {
+    height: 50px;
+    border-radius: 15px;
+    background: var(--ion-color-primary);
+    color: white;
+    width: 100%;
+}
+  ion-card {
+    background: var(--ion-color-primary);
+    margin: 0px 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    border-radius: 15px;
+    ion-item {
+      --background: transparent;
+      color: white;
+      ion-label {
+        color: white;
+      }
+      p {
+        color: white;
+      }
+    }
   }
-  .shops_text {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 3px;
-    margin-bottom: 2vh;
+  ion-row {
+    padding: 0px;
+    ion-col {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
   }
-  .shops_container {
-    .shop_card {
-      box-shadow:none;
-      margin:0px;
-      padding:10px;
-      --background:rgba(9, 166, 109, 0.05);
-      border-radius:10px;
-      margin-bottom: 2vh;
-      ion-row {
-        .img_col {
-          display: grid;
-          place-items: center;
+  .main_content {
+    margin-top: 10px;
+    .today_card {
+      .card_item_today {
+        ion-label {
+          font-size: 16px;
+          color: white;
+        }
+        .full_date_today {
+          font-size: 12px;
+        }
+      }
+      .temp_row {
+        ion-col {
+          .temprature {
+            font-family: "poppins-bold";
+            font-size: 58px;
+            padding: 10px;
+            margin: 0px;
+            color: white;
+            position: relative;
+            width: max-content;
+            span {
+              color: #fed55b;
+              font-size: 21px;
+              font-family: "poppins-light";
+              position: absolute;
+              right: -4px;
+              top: 19px;
+            }
+          }
           img {
-            width: 100%;
-            height: auto;
+            width: 95px;
+            height: 90px;
+            object-fit: contain;
+            display: block;
+            margin: auto;
           }
         }
-        .content_col {
-          .shop_name {
-            font-weight: 900;
-            color: #333333;
-            font-size: 14px;
-            margin-bottom: 0px;
-          }
-          .items_need {
-            font-size: 12px;
-            color: #777777;
-            margin: 0px;
-            padding-top: 4px;
-          }
-          .rewards_p {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 12px;
-            font-weight:600;
-            .r_won {
-              color: var(--ion-color-success);
+      }
+      .location {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        color: white;
+        ion-icon {
+          margin-right: 10px;
+          font-size: 22px;
+          color: white;
+        }
+      }
+    }
+    .others {
+      justify-content: space-between;
+
+      ion-col {
+        ion-card {
+          ion-item {
+            ion-icon {
+              margin-right: 10px;
             }
-            .r_rem {
-              color: var(--ion-color-primary);
+            ion-label {
+              .perc {
+                font-family: "poppins-black";
+                font-size: 17px;
+              }
+              .name {
+                font-size: 12px;
+              }
             }
           }
-          .range_item{
-            ion-range{
-              margin:0px;
-              padding:0px;
-              --height: 20px;
-            }
+          ion-item::part(native) {
+            padding: 0px;
           }
         }
       }
     }
+    .other_days {
+      justify-content: space-between;
+
+      ion-col {
+        ion-card {
+          // ion-item{
+          //   ion-icon{}
+          //   ion-label{
+          color: white;
+          .temprature {
+            font-size: 24px;
+            margin: 0px;
+            position: relative;
+            width: max-content;
+            span {
+              color: #fed55b;
+              font-size: 12px;
+              font-family: "poppins-light";
+              position: absolute;
+              right: -11px;
+              top: 2px;
+            }
+          }
+          .day {
+            font-size: 14px;
+            margin: 0px;
+          }
+          //   }
+          // }
+        }
+      }
+    }
   }
+  // .barcode_item {
+  //   border: 1px solid var(--ion-color-primary);
+  //   border-radius: 5px;
+  //   margin: 10px;
+  // }
+  // .shops_text {
+  //   font-size: 16px;
+  //   font-weight: bold;
+  //   margin: 3px;
+  //   margin-bottom: 2vh;
+  // }
+  // .shops_container {
+  //   .shop_card {
+  //     box-shadow:none;
+  //     margin:0px;
+  //     padding:10px;
+  //     --background:rgba(9, 166, 109, 0.05);
+  //     border-radius:10px;
+  //     margin-bottom: 2vh;
+  //     ion-row {
+  //       .img_col {
+  //         display: grid;
+  //         place-items: center;
+  //         img {
+  //           width: 100%;
+  //           height: auto;
+  //         }
+  //       }
+  //       .content_col {
+  //         .shop_name {
+  //           font-weight: 900;
+  //           color: #333333;
+  //           font-size: 14px;
+  //           margin-bottom: 0px;
+  //         }
+  //         .items_need {
+  //           font-size: 12px;
+  //           color: #777777;
+  //           margin: 0px;
+  //           padding-top: 4px;
+  //         }
+  //         .rewards_p {
+  //           display: flex;
+  //           align-items: center;
+  //           justify-content: space-between;
+  //           font-size: 12px;
+  //           font-weight:600;
+  //           .r_won {
+  //             color: var(--ion-color-success);
+  //           }
+  //           .r_rem {
+  //             color: var(--ion-color-primary);
+  //           }
+  //         }
+  //         .range_item{
+  //           ion-range{
+  //             margin:0px;
+  //             padding:0px;
+  //             --height: 20px;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }

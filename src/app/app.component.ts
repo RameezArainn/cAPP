@@ -10,15 +10,15 @@ import { NavController } from '@ionic/angular';
 export class AppComponent {
 
   constructor(private router:Router,private navCtrl:NavController) {
-    let login=true
-    if(!login){
-      this.navCtrl.navigateRoot('/tabs');
+    // let login=true
+    // if(!login){
+    //   this.navCtrl.navigateRoot('/tabs');
 
-    }
-    else{
-      this.navCtrl.navigateRoot('/language');
+    // }
+    // else{
+    //   this.navCtrl.navigateRoot('/language');
 
-    }
+    // }
   }
 
 }
