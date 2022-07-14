@@ -40,7 +40,7 @@ export class ServerService {
   }
   public searchCity(city): Observable<any> {
    
-    var link = 'https://dataservice.accuweather.com/locations/v1/cities/search?apikey=g0UKmZr4Te01yWpY2E7wz5WiG6JljqoH&q='+city;
+    var link = this.baseUrl+'locations/v1/cities/search?apikey=g0UKmZr4Te01yWpY2E7wz5WiG6JljqoH&q='+city;
  
    
     console.log(link);
@@ -51,7 +51,7 @@ export class ServerService {
   }
   public getCityInfo(key): Observable<any> {
   
-    var link = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/'+key+'?apikey=g0UKmZr4Te01yWpY2E7wz5WiG6JljqoH';
+    var link = this.baseUrl+'forecasts/v1/daily/5day/'+key+'?apikey=g0UKmZr4Te01yWpY2E7wz5WiG6JljqoH';
  
    
     console.log(link);
