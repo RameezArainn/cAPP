@@ -8,7 +8,7 @@ import {
 import { retry, catchError } from 'rxjs/operators';
 import { GlobalVariable } from '../globals';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ServerService {
   // httpOptions: { headers: HttpHeaders };
@@ -18,13 +18,11 @@ export class ServerService {
       'Access-Control-Allow-Origin': '*',
     }),
   };
-  baseUrl='https://dataservice.accuweather.com/'
-  
-  constructor(private http: HttpClient,private globals:GlobalVariable) { 
+  baseUrl = 'https://dataservice.accuweather.com/';
 
-  }
-   // Handle API errors
-   handleError(error: HttpErrorResponse) {
+  constructor(private http: HttpClient, private globals: GlobalVariable) {}
+  // Handle API errors
+  handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.
       console.error('An error occurred:', error.error.message);
@@ -39,39 +37,41 @@ export class ServerService {
     return throwError('Something bad happened; please try again later.');
   }
   public searchCity(city): Observable<any> {
-   
-    var link = this.baseUrl+'locations/v1/cities/search?apikey=g0UKmZr4Te01yWpY2E7wz5WiG6JljqoH&q='+city;
- 
-   
+    var link =
+      this.baseUrl +
+      'locations/v1/cities/search?apikey=g0UKmZr4Te01yWpY2E7wz5WiG6JljqoH&q=' +
+      city;
+
     console.log(link);
 
     return this.http
-      .get<any>(link,this.httpOptions)
+      .get<any>(link, this.httpOptions)
       .pipe(retry(1), catchError(this.handleError));
   }
   public getCityInfo(key): Observable<any> {
-  
-    var link = this.baseUrl+'forecasts/v1/daily/5day/'+key+'?apikey=g0UKmZr4Te01yWpY2E7wz5WiG6JljqoH';
- 
-   
+    var link =
+      this.baseUrl +
+      'forecasts/v1/daily/5day/' +
+      key +
+      '?apikey=g0UKmZr4Te01yWpY2E7wz5WiG6JljqoH';
+
     console.log(link);
 
     return this.http
-      .get<any>(link,this.httpOptions)
+      .get<any>(link, this.httpOptions)
       .pipe(retry(1), catchError(this.handleError));
   }
-
 
   public autoComplete(text): Observable<any> {
-  
-var link=this.baseUrl+'locations/v1/cities/autocomplete?apikey=g0UKmZr4Te01yWpY2E7wz5WiG6JljqoH&q='+text;
- 
-   
+    var link =
+      this.baseUrl +
+      'locations/v1/cities/autocomplete?apikey=g0UKmZr4Te01yWpY2E7wz5WiG6JljqoH&q=' +
+      text;
+
     console.log(link);
 
     return this.http
-      .get<any>(link,this.httpOptions)
+      .get<any>(link, this.httpOptions)
       .pipe(retry(1), catchError(this.handleError));
   }
-
 }
