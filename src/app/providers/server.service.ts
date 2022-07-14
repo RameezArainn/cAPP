@@ -18,6 +18,7 @@ export class ServerService {
       'Access-Control-Allow-Origin': '*',
     }),
   };
+  baseUrl='https://dataservice.accuweather.com/'
   
   constructor(private http: HttpClient,private globals:GlobalVariable) { 
 
@@ -37,28 +38,40 @@ export class ServerService {
     // return an observable with a user-facing error message
     return throwError('Something bad happened; please try again later.');
   }
-  public shopRegister(loginData): Observable<any> {
-    var data = JSON.stringify({
-       mobile: '',
-       crPhoto:'',
-       dobOffer:'',
-       totalRequiredPoints:'',
-       name:'',
-       latitude:'',
-       longtitude:'',
-       crNumber:'',
-       activeStatus:'',
-       categoryId:'',
-       crName:'',
-       email:"",
-       });
-    var link = this.globals.baseUrl+ 'shop/new';
+  public searchCity(city): Observable<any> {
+   
+    var link = 'https://dataservice.accuweather.com/locations/v1/cities/search?apikey=g0UKmZr4Te01yWpY2E7wz5WiG6JljqoH&q='+city;
  
    
-    console.log(data);
+    console.log(link);
 
     return this.http
-      .post<any>(link, data,this.httpOptions)
+      .get<any>(link,this.httpOptions)
       .pipe(retry(1), catchError(this.handleError));
   }
+  public getCityInfo(key): Observable<any> {
+  
+    var link = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/'+key+'?apikey=g0UKmZr4Te01yWpY2E7wz5WiG6JljqoH';
+ 
+   
+    console.log(link);
+
+    return this.http
+      .get<any>(link,this.httpOptions)
+      .pipe(retry(1), catchError(this.handleError));
+  }
+
+
+  public autoComplete(text): Observable<any> {
+  
+var link=this.baseUrl+'locations/v1/cities/autocomplete?apikey=g0UKmZr4Te01yWpY2E7wz5WiG6JljqoH&q='+text;
+ 
+   
+    console.log(link);
+
+    return this.http
+      .get<any>(link,this.httpOptions)
+      .pipe(retry(1), catchError(this.handleError));
+  }
+
 }

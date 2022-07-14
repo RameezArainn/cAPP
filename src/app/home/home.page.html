@@ -14,6 +14,12 @@
 <ion-content class="ion-padding">
   <ion-searchbar mode="ios" placeholder="Search for cities"  (ionChange)="onSearchChange($event)"
     [debounce]="250"></ion-searchbar>
+    <ion-list class="search_results" *ngIf="searchResults.length>0">
+      <ion-item (click)="getCityWeather(place.Key,place.LocalizedName)" lines="none" *ngFor="let place of searchResults">
+        {{place.LocalizedName}}
+      </ion-item>
+    </ion-list>
+   
 
 
   <div class="main_content">
@@ -24,14 +30,17 @@
       </ion-item>
       <ion-row class="temp_row">
         <ion-col size="6">
-          <p class="temprature">+30 <span>c</span></p>
+          <p class="temprature">+{{todayTemp}} <span>c</span></p>
         </ion-col>
         <ion-col size="6">
           <img src="assets/few-clouds.png" alt="">
         </ion-col>
       </ion-row>
-      <p class="location">
-        <ion-icon name="location"></ion-icon> Colombia, Sri Lanka
+      <p class="location" *ngIf="placename">
+        <ion-icon name="location"></ion-icon> {{placename}}
+      </p>
+      <p class="location" *ngIf="!placename">
+        <ion-icon name="location"></ion-icon> Search a place
       </p>
     </ion-card>
 

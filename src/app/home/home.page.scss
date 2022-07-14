@@ -17,6 +17,17 @@ ion-header {
 }
 ion-content {
   --background: var(--ion-color-secondary);
+  ion-list{
+    position: absolute;
+    left: 0;
+    right: absolute;
+    right: 0;
+    z-index: 100;
+    width: 82%;
+    top: 80px;
+    margin: auto;
+    border-radius: 15px;
+  }
   .searchbar-input-container.sc-ion-searchbar-ios {
     height: 50px;
     border-radius: 15px;
