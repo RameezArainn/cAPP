@@ -12,13 +12,14 @@ import { GlobalVariable } from '../globals';
 })
 export class ServerService {
   // httpOptions: { headers: HttpHeaders };
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-    }),
-  };
+  // httpOptions = {
+  //   headers: new HttpHeaders({
+  //     'Content-Type': 'application/json',
+  //     'Access-Control-Allow-Origin': '*',
+  //   }),
+  // };
   baseUrl = 'https://dataservice.accuweather.com/';
+  apiKey: string='iSXWoyM8qLnglzpg5nm7bbrIkvBQVNXy';
 
   constructor(private http: HttpClient, private globals: GlobalVariable) {}
   // Handle API errors
@@ -39,13 +40,13 @@ export class ServerService {
   public searchCity(city): Observable<any> {
     var link =
       this.baseUrl +
-      'locations/v1/cities/search?apikey=g0UKmZr4Te01yWpY2E7wz5WiG6JljqoH&q=' +
+      'locations/v1/cities/search?apikey='+this.apiKey+'&q=' +
       city;
 
     console.log(link);
 
     return this.http
-      .get<any>(link, this.httpOptions)
+      .get<any>(link)
       .pipe(retry(1), catchError(this.handleError));
   }
   public getCityInfo(key): Observable<any> {
@@ -53,25 +54,25 @@ export class ServerService {
       this.baseUrl +
       'forecasts/v1/daily/5day/' +
       key +
-      '?apikey=g0UKmZr4Te01yWpY2E7wz5WiG6JljqoH';
+      '?apikey='+this.apiKey;
 
     console.log(link);
 
     return this.http
-      .get<any>(link, this.httpOptions)
+      .get<any>(link)
       .pipe(retry(1), catchError(this.handleError));
   }
 
   public autoComplete(text): Observable<any> {
     var link =
       this.baseUrl +
-      'locations/v1/cities/autocomplete?apikey=g0UKmZr4Te01yWpY2E7wz5WiG6JljqoH&q=' +
+      'locations/v1/cities/autocomplete?apikey='+this.apiKey+'&q=' +
       text;
 
     console.log(link);
 
     return this.http
-      .get<any>(link, this.httpOptions)
+      .get<any>(link)
       .pipe(retry(1), catchError(this.handleError));
   }
 }
